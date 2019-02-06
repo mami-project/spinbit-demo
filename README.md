@@ -1,9 +1,3 @@
-# Testbed description
-
-**IMPORTANT:** port for dashboard changed from 8888 to 9999.
-
-[More info...](testbed/README.md)
-
 # Dependencies
 
 Make sure you have the following installed:
