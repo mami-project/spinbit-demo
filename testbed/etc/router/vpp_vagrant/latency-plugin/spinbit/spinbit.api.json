@@ -1,0 +1,22 @@
+{
+    "types" : [
+
+    ],
+    "messages" : [
+        ["spinbit_enable_disable",
+            ["u16", "_vl_msg_id"],
+            ["u32", "client_index"],
+            ["u32", "context"],
+            ["u8", "enable_disable"],
+            ["u32", "sw_if_index"],
+            {"crc" : "0x942ce439"}
+        ],
+        ["spinbit_enable_disable_reply",
+            ["u16", "_vl_msg_id"],
+            ["u32", "context"],
+            ["i32", "retval"],
+            {"crc" : "0x23dafddc"}
+        ]
+    ],
+"vl_api_version" :"0x4b8265e5"
+}

@@ -1,0 +1,281 @@
+{
+  "dashboards": [
+    {
+      "id": 1,
+      "cells": [
+        {
+          "i": "3f32827d-9b15-48f4-a955-51108cba5d05",
+          "x": 8,
+          "y": 5,
+          "w": 4,
+          "h": 3,
+          "name": "Valid PSN/PSE samples",
+          "queries": [
+            {
+              "query": "SELECT median(\"client-domain-downlink.count.ValidTs\") AS \"median_client-domain-downlink.count.ValidTs\" FROM \"telegraf\".\"autogen\".\"httpjson_netem\" WHERE time > :dashboardTime: GROUP BY :interval:",
+              "queryConfig": {
+                "database": "telegraf",
+                "measurement": "httpjson_netem",
+                "retentionPolicy": "autogen",
+                "fields": [
+                  {
+                    "field": "client-domain-downlink.count.ValidTs",
+                    "funcs": [
+                      "median"
+                    ]
+                  }
+                ],
+                "tags": {},
+                "groupBy": {
+                  "time": "auto",
+                  "tags": []
+                },
+                "areTagsAccepted": false,
+                "rawText": null,
+                "range": null
+              }
+            }
+          ],
+          "axes": {
+            "x": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y2": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            }
+          },
+          "type": "line",
+          "links": {
+            "self": "/chronograf/v1/dashboards/1/cells/3f32827d-9b15-48f4-a955-51108cba5d05"
+          }
+        },
+        {
+          "i": "6d134b09-9d4d-45fc-8975-f9ce2a388e06",
+          "x": 4,
+          "y": 5,
+          "w": 4,
+          "h": 3,
+          "name": "Invalid Spin edges",
+          "queries": [
+            {
+              "query": "SELECT median(\"client-domain-downlink.count.Invalid\") AS \"median_client-domain-downlink.count.Invalid\" FROM \"telegraf\".\"autogen\".\"httpjson_netem\" WHERE time > :dashboardTime: GROUP BY :interval:",
+              "queryConfig": {
+                "database": "telegraf",
+                "measurement": "httpjson_netem",
+                "retentionPolicy": "autogen",
+                "fields": [
+                  {
+                    "field": "client-domain-downlink.count.Invalid",
+                    "funcs": [
+                      "median"
+                    ]
+                  }
+                ],
+                "tags": {},
+                "groupBy": {
+                  "time": "auto",
+                  "tags": []
+                },
+                "areTagsAccepted": false,
+                "rawText": null,
+                "range": null
+              }
+            }
+          ],
+          "axes": {
+            "x": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y2": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            }
+          },
+          "type": "line",
+          "links": {
+            "self": "/chronograf/v1/dashboards/1/cells/6d134b09-9d4d-45fc-8975-f9ce2a388e06"
+          }
+        },
+        {
+          "i": "7f8ebfd1-8b90-4f3a-8d53-4cead2d26351",
+          "x": 0,
+          "y": 5,
+          "w": 4,
+          "h": 3,
+          "name": "Valid Spin edges",
+          "queries": [
+            {
+              "query": "SELECT median(\"client-domain-downlink.delay.Valid\") AS \"median_client-domain-downlink.delay.Valid\" FROM \"telegraf\".\"autogen\".\"httpjson_netem\" WHERE time > :dashboardTime: GROUP BY :interval:",
+              "queryConfig": {
+                "database": "telegraf",
+                "measurement": "httpjson_netem",
+                "retentionPolicy": "autogen",
+                "fields": [
+                  {
+                    "field": "client-domain-downlink.delay.Valid",
+                    "funcs": [
+                      "median"
+                    ]
+                  }
+                ],
+                "tags": {},
+                "groupBy": {
+                  "time": "auto",
+                  "tags": []
+                },
+                "areTagsAccepted": false,
+                "rawText": null,
+                "range": null
+              }
+            }
+          ],
+          "axes": {
+            "x": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y2": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            }
+          },
+          "type": "line",
+          "links": {
+            "self": "/chronograf/v1/dashboards/1/cells/7f8ebfd1-8b90-4f3a-8d53-4cead2d26351"
+          }
+        },
+        {
+          "i": "55e1f65b-124e-4c81-b2d7-e044b6960fe3",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 5,
+          "name": "Different RTT estimation techniques",
+          "queries": [
+            {
+              "query": "SELECT median(\"client-domain-downlink.delay.Spin\") AS \"median_client-domain-downlink.delay.Spin\", median(\"client-domain-downlink.delay.PsnPse\") AS \"median_client-domain-downlink.delay.PsnPse\" FROM \"telegraf\".\"autogen\".\"httpjson_netem\" WHERE time > :dashboardTime: GROUP BY :interval:",
+              "queryConfig": {
+                "database": "telegraf",
+                "measurement": "httpjson_netem",
+                "retentionPolicy": "autogen",
+                "fields": [
+                  {
+                    "field": "client-domain-downlink.delay.Spin",
+                    "funcs": [
+                      "median"
+                    ]
+                  },
+                  {
+                    "field": "client-domain-downlink.delay.PsnPse",
+                    "funcs": [
+                      "median"
+                    ]
+                  }
+                ],
+                "tags": {},
+                "groupBy": {
+                  "time": "auto",
+                  "tags": []
+                },
+                "areTagsAccepted": false,
+                "rawText": null,
+                "range": null
+              }
+            }
+          ],
+          "axes": {
+            "x": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y": {
+              "bounds": [
+                "",
+                ".3"
+              ],
+              "label": "RTT estimation in seconds",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            },
+            "y2": {
+              "bounds": [],
+              "label": "",
+              "prefix": "",
+              "suffix": "",
+              "base": "10",
+              "scale": "linear"
+            }
+          },
+          "type": "line",
+          "links": {
+            "self": "/chronograf/v1/dashboards/1/cells/55e1f65b-124e-4c81-b2d7-e044b6960fe3"
+          }
+        }
+      ],
+      "templates": [],
+      "name": "VPP Demo",
+      "links": {
+        "self": "/chronograf/v1/dashboards/1",
+        "cells": "/chronograf/v1/dashboards/1/cells",
+        "templates": "/chronograf/v1/dashboards/1/templates"
+      }
+    }
+  ]
+}
