@@ -19,9 +19,6 @@ RUN apk add --no-cache \
 
 RUN apk add hping3 --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing --update-cache
 
-RUN pwd
-RUN pwd
-
 RUN update-ca-certificates
 
 RUN go get -u github.com/buehlert/netem-pub/netem \
